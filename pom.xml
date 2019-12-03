@@ -178,7 +178,7 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-                 <plugins>
+
              <plugins>
                     <groupId>org.apache.maven.plugins</groupId>
                      <artifactId>maven-surefire-plugin</artifactId>
