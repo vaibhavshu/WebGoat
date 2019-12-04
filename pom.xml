@@ -191,22 +191,18 @@
                     <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
                 </configuration>
             </plugin>
-                        <plugin>
-                               <groupId>org.owasp</groupId>
-                               <artifactId>dependency-check-maven</artifactId>
-                               <version>5.2.4</version>
-                               <configuration>
-                                   <format>all</format>
-                                   <failBuildOnCVSS>7</failBuildOnCVSS>
-                               </configuration>
-                               <executions>
-                                   <execution>
-                                       <goals>
-                                           <!-- run only using explicit command -->
-                                           <goal>none</goal>
-                                       </goals>
-                                   </execution>
-                               </executions>
+                        
+                  <plugin>
+                      <groupId>org.owasp</groupId>
+                      <artifactId>dependency-check-maven</artifactId>
+                      <version>3.0.2</version>
+                      <executions>
+                          <execution>
+                              <goals>
+                                  <goal>check</goal>
+                              </goals>
+                          </execution>
+                      </executions>
                   </plugin>
         </plugins>
     </build>
