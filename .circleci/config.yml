@@ -3,6 +3,8 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+orbs:
+  owasp: entur/owasp@0.0.8
 jobs:
   build:
     docker:
@@ -31,7 +33,11 @@ jobs:
             - v1-dependencies-
 
       - run: mvn clean install -DskipTests
-
+      workflows:
+  owasp:
+    jobs:
+      - owasp/maven_owasp_dependency_check:
+          executor: java_11
 
       - save_cache:
           paths:
