@@ -33,10 +33,6 @@ jobs:
             - v1-dependencies-
 
       - run: mvn clean install -DskipTests
-  owasp:
-    jobs:
-      - owasp/maven_owasp_dependency_check:
-          executor: java_11
 
       - save_cache:
           paths:
